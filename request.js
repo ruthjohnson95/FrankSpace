@@ -20,10 +20,11 @@
 var id = 4983859492027 
 
 function getEvents(){
+	console.log("got to getEvents");
 	FB.api('/'+id+'/events', function(response){
 		for (var i=0; i<10; i++)
 		{
-			console.log(response.data[i].name)
+			console.log(response.data[i].name);
 			getMemberEvents(response.data[i].id);
 		}
 	});
