@@ -1,33 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="HoWApp">
-
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-    <title>Freeloader</title>
-    <link rel="shortcut icon" href="http://i.imgur.com/z5XaCW8.png">
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-      <!-- Custom CSS -->
-    <link href="css/app.css" rel="stylesheet">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-    <!-- <link href="iconFont.css" rel="stylesheet"> -->
-   
-   <!-- angular.js -->
-    <script src="js/angular.js"></script>
-    <script src="js/HoW.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-sanitize.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-    
+
+<script src= "request.js"> </script>
+
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="HoWCtrl">
+<body>
     <!-- facebook initialization code; for like counter -->
     <script>
       window.fbAsyncInit = function() {
@@ -37,25 +27,28 @@
           version    : 'v2.1'
         });
       };
-      var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-  
-    </script> 
 
-                           <div class="loginBody">
-                                <div id="status">
-                                    <!--<img src="http://static.wixstatic.com/media/6f84e3_586701a7134c40f5b43b2b9fb5a1f7e8.png" style="cursor:pointer;width:100px;height:100px" onclick="Login()" />-->
-                                    <img src="http://static.wixstatic.com/media/6f84e3_586701a7134c40f5b43b2b9fb5a1f7e8.png" style="cursor:pointer;width:100px;height:100px" onclick="Login()" onmouseover="this.src='http://i.imgur.com/rIo8jjA.png';" onmouseout="this.src='http://static.wixstatic.com/media/6f84e3_586701a7134c40f5b43b2b9fb5a1f7e8.png';" />
-                                </div>    
-                            </div>
-                            
-         
-    <script src="FB_login.js"></script>
+        (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+  </script> 
+                                   
+       <div class="panel panel-default">
+       <!-- Default panel contents -->
+      <div class="panel-heading">Panel heading</div>
+      Table here
+      <!-- Table -->
+      <table class="table">
+        
+      </table>
+    </div>
 
-    <script src="request.js"></script>
+
+    <button onclick="getEvents()">Click me</button>
 
    </body>
 
